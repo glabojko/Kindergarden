@@ -17,7 +17,7 @@ namespace Kindergarden
             Console.WriteLine(Heniek);
 
             Initialize();
-            
+
 
             while (true)
             {
@@ -58,14 +58,14 @@ namespace Kindergarden
             employees.Add(new Cook(5, "kucharka Bożenka"));
 
 
-            groups.Add(new Group(1, "dupa", employees[1]));
-            groups.Add(new Group(2, employees[2]));
-            groups.Add(new Group(3, employees[3]));
+            groups.Add(new Group(1, "dupa", employees[2]));
+            groups.Add(new Group(2, "dupa", employees[3]));
+            groups.Add(new Group(3, "dupa", employees[4]));
         }
-   
-    
-            
-            }
+
+
+
+
 
         static void ShowGroupList()
         {
@@ -78,37 +78,38 @@ namespace Kindergarden
 
 
         static void AdmitKid()
+        {
+            Console.Write("Podaj imię dziecka: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Podaj wiek dziecka: ");
+            if (int.TryParse(Console.ReadLine(), out int age))
             {
-                Console.Write("Podaj imię dziecka: ");
-                string name = Console.ReadLine();
+                Group? group = null;
 
-                Console.Write("Podaj wiek dziecka: ");
-                if (int.TryParse(Console.ReadLine(), out int age))
+                foreach (Group g in groups)
                 {
-                    Group? group = null;
+                    if (age <= g.GroupStartAge)
+                    {
+                        group = g;
+                        break;
+                    }
+                }
 
-                    foreach (Group g in groups)
-                    {
-                        if (age <= g.GroupStartAge)
-                        {
-                            group = g;
-                            break;
-                        }
-                    }
-
-                    if (group == null)
-                    {
-                        Console.WriteLine("Nie znaleziono odpowiedniej grupy dla dziecka.");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Dziecko {name} przyjęto do grupy {group.GroupNumber} z nauczycielką {group.Teacher.Name}");
-                    }
+                if (group == null)
+                {
+                    Console.WriteLine("Nie znaleziono odpowiedniej grupy dla dziecka.");
                 }
                 else
                 {
-                    Console.WriteLine("Niepoprawny wiek dziecka.");
+                    Console.WriteLine($"Dziecko {name} przyjęto do grupy {group.GroupNumber} z nauczycielką {group.Teacher.Name}");
                 }
             }
+            else
+            {
+                Console.WriteLine("Niepoprawny wiek dziecka.");
+            }
         }
+    }
+}
     
