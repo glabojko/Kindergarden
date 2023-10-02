@@ -55,12 +55,12 @@ namespace Kindergarden
             employees.Add(new Teacher(3, "pani Marysia"));
             employees.Add(new Teacher(4, "pani Kasia"));
             employees.Add(new Cook(5, "kucharka Marzenka"));
-            employees.Add(new Cook(5, "kucharka Bożenka"));
+            employees.Add(new Cook(6, "kucharka Bożenka"));
 
 
-            groups.Add(new Group(1, "dupa", employees[2]));
-            groups.Add(new Group(2, "dupa", employees[3]));
-            groups.Add(new Group(3, "dupa", employees[4]));
+            groups.Add(new Group(1, "dupa", (Teacher)employees[2]));
+            groups.Add(new Group(2, "dupa", (Teacher)employees[3]));
+            //groups.Add(new Group(3, "dupa", (Teacher)employees[4]));
         }
 
 
