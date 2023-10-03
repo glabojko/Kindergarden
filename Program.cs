@@ -58,6 +58,7 @@ namespace Kindergarden
             employees.Add(new Cook(6, "kucharka Bożenka"));
 
 
+
             groups.Add(new Group(1, "dupa", (Teacher)employees[2]));
             groups.Add(new Group(2, "dupa", (Teacher)employees[3]));
             //groups.Add(new Group(3, "dupa", (Teacher)employees[4]));
@@ -72,6 +73,7 @@ namespace Kindergarden
             foreach (Group group in groups)
             {
                 Console.WriteLine($"Grupa {group.GroupNumber} z nauczycielką {group.Teacher.Name}");
+                
             }
         }
 

@@ -12,5 +12,10 @@ namespace Kindergarden
         {
 
         }
+
+        public override string ToString()
+        {
+            return $"Nazywam się {Name} i jestem kucharką.";
+        }
     }
 }
