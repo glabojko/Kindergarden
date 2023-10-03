@@ -63,9 +63,9 @@ namespace Kindergarden
 
 
 
-            groups.Add(new Group(1, "dupa", (Teacher)employees[2]));
-            groups.Add(new Group(2, "dupa", (Teacher)employees[3]));
-            //groups.Add(new Group(3, "dupa", (Teacher)employees[4]));
+            groups.Add(new Group(1, "Muchomorki", (Teacher)employees[1]));
+            groups.Add(new Group(2, "Biedronki", (Teacher)employees[2]));
+            groups.Add(new Group(3, "Motylki", (Teacher)employees[3]));
         }
 
 
@@ -76,7 +76,7 @@ namespace Kindergarden
         {
             foreach (Group group in groups)
             {
-                Console.WriteLine($"Grupa {group.GroupNumber} z nauczycielką {group.Teacher.Name}");
+                Console.WriteLine($"Grupa {group.GroupNumber} {group.GroupName} z nauczycielką {group.Teacher.Name}");
                 
             }
         }
@@ -116,6 +116,8 @@ namespace Kindergarden
                 Console.WriteLine("Niepoprawny wiek dziecka.");
             }
         }
+
+        //Kid.ToString();
     }
 }
     

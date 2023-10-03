@@ -17,7 +17,7 @@ namespace Kindergarden
         {
             GroupNumber = groupNumber;
             GroupName = groupName;
-            GroupStartAge = groupNumber + 2;
+            GroupStartAge = groupNumber + 3;
             Teacher = teacher;
         }
     }
