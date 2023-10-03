@@ -15,6 +15,11 @@ namespace Kindergarden
             FirstName = firstName;
             Age = age;
         }
+
+        public override string ToString()
+        {
+            return $"Nazywam się {FirstName} i pokazuję Ci {Age} palców";
+        }
     }
 }
 

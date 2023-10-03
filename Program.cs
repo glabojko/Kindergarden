@@ -13,15 +13,19 @@ namespace Kindergarden
             Console.WriteLine("Welcome to our kindergarden!\n");
 
             Employee Heniek = new(1, "Heniu");
+            Cook halina = new(2, "Halina");
+            
 
             Console.WriteLine(Heniek);
+            Console.WriteLine(halina);
+            
 
             Initialize();
 
 
             while (true)
             {
-                Console.WriteLine("Wybierz opcję:");
+                Console.WriteLine("\nWybierz opcję:");
                 Console.WriteLine("1. Przyjęcie dziecka");
                 Console.WriteLine("2. Wyświetl listę grup");
                 Console.WriteLine("3. Wyjście (Q)");

@@ -18,7 +18,7 @@ namespace Kindergarden
         }
         public override string ToString()
         {
-            return $"My name is {Name}.";
+            return $"Nazwywam się {Name} i pracuję w tym przedszkolu.";
         }
     }
 }
