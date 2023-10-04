@@ -76,7 +76,7 @@ namespace Kindergarden
         {
             foreach (Group group in groups)
             {
-                Console.WriteLine($"Grupa {group.GroupNumber} {group.GroupName} z nauczycielką {group.Teacher.Name}");
+                Console.WriteLine($"Grupa {group.GroupNumber} {group.GroupName} z nauczycielką {group.Teacher.Name} i dziećmi {group.ToString()}");
                 
             }
         }
@@ -98,6 +98,7 @@ namespace Kindergarden
                     if (age <= g.GroupStartAge)
                     {
                         group = g;
+                        g.AddKidToGroup(new Kid(name, age));
                         break;
                     }
                 }

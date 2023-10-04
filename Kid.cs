@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kindergarden
 {
-    internal class Kid
+    public class Kid
     {
         string FirstName { get; set; }
         int Age { get; set; }
